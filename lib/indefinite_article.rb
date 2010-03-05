@@ -1,6 +1,8 @@
 require 'indefinite_article/articulated'
 require 'activesupport'
 
-WORDS_WITH_INITIAL_VOWELS_THAT_ACT_LIKE_WORDS_WITH_INITIAL_CONSONANTS = %w(one united)
-INDEFINITE_ARTICLES = { :vowel => 'an', :consonant => 'a'}
-VOWELS = %w(a e i o u)
+module IndefiniteArticle
+  WORDS_WITH_INITIAL_VOWELS_THAT_ACT_LIKE_WORDS_WITH_INITIAL_CONSONANTS = %w(one united)
+  INDEFINITE_ARTICLES = { :vowel => 'an', :consonant => 'a'}
+  VOWELS = %w(a e i o u)
+end
