@@ -5,8 +5,8 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "indefinite_article"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{Indefinite articles for stringlike classes in Ruby}
+    gem.description = %Q{Adds indefinite article ('a' vs. 'an') methods to String and Symbol}
     gem.email = "andy@rossmeissl.net"
     gem.homepage = "http://github.com/rossmeissl/indefinite_article"
     gem.authors = ["Andy Rossmeissl"]
