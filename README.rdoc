@@ -9,9 +9,12 @@ Adds indefinite article methods to String and Symbol so that you can do:
   
 == Installation
 
-The gem is hosted at http://gemcutter.org/gems/indefinite_article
+The gem is hosted at https://github.com/kenglishhi/indefinite_article. Put the following in your Gemfile
 
-  gem install indefinite_article
+  gem 'indefinite_article', '0.1.1', :git => 'git://github.com/kenglishhi/indefinite_article.git'
+
+== Notes
+This was forked from https://github.com/rossmeissl/indefinite_article but updated to use Rails 3.0.
   
 == Copyright
 
