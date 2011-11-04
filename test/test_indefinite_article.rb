@@ -1,9 +1,11 @@
-require 'helper'
+require_relative 'helper'
 
 class TestIndefiniteArticle < Test::Unit::TestCase
   def setup
   end
-  
+  def test_active_support
+    assert_equal 'banana'.first, 'b'
+  end 
   def test_indefinite_article_selection
     assert_equal 'a', 'banana'.indefinite_article
     assert_equal 'an', 'apple'.indefinite_article
