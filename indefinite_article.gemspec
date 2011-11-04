@@ -13,9 +13,8 @@ Gem::Specification.new do |s|
 
   s.rubyforge_project = "indefinite_article"
 
-  s.files         = `git ls-files`.split("\n")
-  s.test_files    = `git ls-files -- {test}/*`.split("\n")
-  s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
+  s.files         = Dir['Gemfile', 'LICENSE', 'README.rdoc', 'Rakefile', 'lib/**/*']
+  s.test_files    = ['test/test_indefinite_article.rb']
   s.require_paths = ["lib"]
   if s.respond_to? :specification_version then
     s.specification_version = 3
