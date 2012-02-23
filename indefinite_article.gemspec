@@ -27,11 +27,11 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<i18n>, ['>=0.5.0','<=0.6'])
     else
       s.add_dependency(%q<activesupport>, ['>= 3.0.0', '< 3.3.0'] )
-      s.add_dependency(%q<i18n>, ['~>0.5.0'])
+      s.add_dependency(%q<i18n>, ['>=0.5.0','<=0.6'])
     end
   else
     s.add_dependency(%q<activesupport>, ['>= 3.0.0', '< 3.3.0'] )
-    s.add_dependency(%q<i18n>, ['~>0.5.0'])
+    s.add_dependency(%q<i18n>, ['>=0.5.0','<=0.6'])
   end
 
 
