@@ -3,7 +3,7 @@ module IndefiniteArticle
     def indefinite_article
       if ::IndefiniteArticle::WORDS_WITH_INITIAL_VOWELS_THAT_ACT_LIKE_WORDS_WITH_INITIAL_CONSONANTS.include? to_s._first_word_for_indefinite_article._first_term_for_indefinite_article.downcase
         ::IndefiniteArticle::INDEFINITE_ARTICLES[:consonant]
-      elsif VOWELS.include? to_s.first.downcase
+      elsif VOWELS.include? self.to_s.first.downcase
         ::IndefiniteArticle::INDEFINITE_ARTICLES[:vowel]
       else
         ::IndefiniteArticle::INDEFINITE_ARTICLES[:consonant]
