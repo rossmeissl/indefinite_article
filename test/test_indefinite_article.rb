@@ -14,6 +14,10 @@ class TestIndefiniteArticle < Test::Unit::TestCase
   end
 
   def test_unusual_article_selection
+    assert_equal 'a', 'unilateral'.indefinite_article
+    assert_equal 'an', 'unintentional'.indefinite_article
+    assert_equal 'an', 'unilluminated'.indefinite_article
+    assert_equal 'an', 'onerous'.indefinite_article
     assert_equal 'a', 'one'.indefinite_article
     assert_equal 'a', 'One'.indefinite_article
     assert_equal 'a', 'unicorn'.indefinite_article

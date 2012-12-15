@@ -2,13 +2,9 @@ module IndefiniteArticle
   module Articulated
     def indefinite_article
       string = to_s.split(/[- ]/).first
-      WORDS_WITH_INITIAL_VOWELS_THAT_ACT_LIKE_WORDS_WITH_INITIAL_CONSONANTS.each do |test|
-        return INDEFINITE_ARTICLE_BEFORE_CONSONANT if string[test]
-      end
-      WORDS_WITH_INITIAL_CONSONANTS_THAT_ACT_LIKE_WORDS_WITH_INITIAL_VOWELS.each do |test|
-        return INDEFINITE_ARTICLE_BEFORE_VOWEL if string[test]
-      end
-      if VOWELS.include? self.to_s.first.downcase
+      if string[INDEFINITE_ARTICLE_CONSONANT_LIKE_START]
+        INDEFINITE_ARTICLE_BEFORE_CONSONANT
+      elsif string[INDEFINITE_ARTICLE_VOWEL_LIKE_START]
         INDEFINITE_ARTICLE_BEFORE_VOWEL
       else
         INDEFINITE_ARTICLE_BEFORE_CONSONANT
