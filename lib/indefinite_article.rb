@@ -1,3 +1,33 @@
-require 'indefinite_article/articulated'
 require 'active_support'
 require 'active_support/core_ext/string'
+
+module IndefiniteArticle
+
+  A_REQUIRING_PATTERNS = /^(([bcdgjkpqtuvwyz]|onc?e|onetime)$|e[uw]|uk|uni(l[^l]|[a-ko-z]))/i
+  AN_REQUIRING_PATTERNS = /^([aefhilmnorsx]$|hono|honest|hour|heir|[aeiou])/i
+  UPCASE_A_REQUIRING_PATTERNS = /^(UN$)/
+  UPCASE_AN_REQUIRING_PATTERNS = /^$/ #need if we decide to support acronyms like "XL" (extra-large)
+
+  def indefinite_article
+    first_word = to_s.split(/[- ]/).first
+    if (first_word[AN_REQUIRING_PATTERNS] || first_word[UPCASE_AN_REQUIRING_PATTERNS]) &&
+       !(first_word[A_REQUIRING_PATTERNS] || first_word[UPCASE_A_REQUIRING_PATTERNS])
+      'an'
+    else
+      'a'
+    end
+  end
+
+  def with_indefinite_article(upcase = false)
+    "#{upcase ? indefinite_article.humanize : indefinite_article}#{ ' ' unless self.blank? }#{self}"
+  end
+  alias :indefinitize :with_indefinite_article
+end
+
+class String
+  include ::IndefiniteArticle
+end
+
+class Symbol
+  include ::IndefiniteArticle
+end
