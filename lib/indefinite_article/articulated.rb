@@ -1,33 +1,30 @@
 module IndefiniteArticle
-  module Articulated
-    def indefinite_article
-      if ::IndefiniteArticle::WORDS_WITH_INITIAL_VOWELS_THAT_ACT_LIKE_WORDS_WITH_INITIAL_CONSONANTS.include? to_s._first_word_for_indefinite_article._first_term_for_indefinite_article.downcase
-        ::IndefiniteArticle::INDEFINITE_ARTICLES[:consonant]
-      elsif VOWELS.include? self.to_s.first.downcase
-        ::IndefiniteArticle::INDEFINITE_ARTICLES[:vowel]
-      else
-        ::IndefiniteArticle::INDEFINITE_ARTICLES[:consonant]
-      end
-    end
-  
-    def with_indefinite_article(upcase = false)
-      "#{upcase ? indefinite_article.humanize : indefinite_article}#{ ' ' unless self.blank? }#{self}"
-    end
 
-    def _first_word_for_indefinite_article
-      split(' ').first
-    end
-    
-    def _first_term_for_indefinite_article
-      split('-').first
+  A_REQUIRING_PATTERNS = /^(([bcdgjkpqtuvwyz]|onc?e|onetime)$|e[uw]|uk|uni(l[^l]|[a-ko-z]))/i
+  AN_REQUIRING_PATTERNS = /^([aefhilmnorsx]$|hono|honest|hour|heir|[aeiou])/i
+  UPCASE_A_REQUIRING_PATTERNS = /^(UN$)/
+  UPCASE_AN_REQUIRING_PATTERNS = /^$/ #need if we decide to support acronyms like "XL" (extra-large)
+
+  def indefinite_article
+    first_word = to_s.split(/[- ]/).first
+    if (first_word[AN_REQUIRING_PATTERNS] || first_word[UPCASE_AN_REQUIRING_PATTERNS]) &&
+       !(first_word[A_REQUIRING_PATTERNS] || first_word[UPCASE_A_REQUIRING_PATTERNS])
+      'an'
+    else
+      'a'
     end
   end
+
+  def with_indefinite_article(upcase = false)
+    "#{upcase ? indefinite_article.humanize : indefinite_article}#{ ' ' unless self.blank? }#{self}"
+  end
+  alias :indefinitize :with_indefinite_article
 end
 
 class String
-  include ::IndefiniteArticle::Articulated
+  include ::IndefiniteArticle
 end
 
 class Symbol
-  include ::IndefiniteArticle::Articulated
+  include ::IndefiniteArticle
 end
