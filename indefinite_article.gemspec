@@ -5,34 +5,18 @@ require "indefinite_article/version"
 Gem::Specification.new do |s|
   s.name        = "indefinite_article"
   s.version     = IndefiniteArticle::VERSION
-  s.authors     = ["Kevin English"]
-  s.email       = ["kenglish@gmail.com"]
-  s.homepage    = ""
+  s.authors     = ["Andrew Rossmeissl", 'Shane Brinkman-Davis']
+  s.email       = ["andy@rossmeissl.net"]
+  s.homepage    = "http://github.com/rossmeissl/indefinite_article"
   s.summary     = %q{Adds indefinite article methods to String and Symbol}
   s.description = %q{Adds indefinite article methods to String and Symbol}
 
-  s.rubyforge_project = "indefinite_article"
-
-  s.files         = Dir['Gemfile', 'LICENSE', 'README.rdoc', 'Rakefile', 'lib/**/*']
-  s.test_files    = ['test/test_indefinite_article.rb']
+  s.files         = [
+    'indefinite_article.gemspec',
+    'lib/indefinite_article.rb',
+    'lib/indefinite_article/version.rb'
+  ]
   s.require_paths = ["lib"]
-  if s.respond_to? :specification_version then
-    s.specification_version = 3
-
-    if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<activesupport>, ['>= 3.0.0', '< 3.3.0'] )
-      s.add_development_dependency(%q<i18n>, '~> 0.6.0')
-
-      s.add_development_dependency(%q<activesupport>, ['>= 3.0.0', '< 3.3.0'] )
-      s.add_development_dependency(%q<i18n>, '~> 0.6.0')
-    else
-      s.add_dependency(%q<activesupport>, ['>= 3.0.0', '< 3.3.0'] )
-      s.add_development_dependency(%q<i18n>, '~> 0.6.0')
-    end
-  else
-    s.add_dependency(%q<activesupport>, ['>= 3.0.0', '< 3.3.0'] )
-    s.add_development_dependency(%q<i18n>, '~> 0.6.0')
-  end
-
-
+  s.add_dependency 'activesupport'
+  s.add_development_dependency 'i18n'
 end
