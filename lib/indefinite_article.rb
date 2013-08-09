@@ -3,7 +3,7 @@ require 'active_support/core_ext/string'
 
 module IndefiniteArticle
 
-  A_REQUIRING_PATTERNS = /^(([bcdgjkpqtuvwyz]|onc?e|onetime)$|e[uw]|uk|uni(l[^l]|[a-ko-z]))/i
+  A_REQUIRING_PATTERNS = /^(([bcdgjkpqtuvwyz]|onc?e|onetime)$|e[uw]|uk|ur[aeiou]|use|ut([^t])|uni(l[^l]|[a-ko-z]))/i
   AN_REQUIRING_PATTERNS = /^([aefhilmnorsx]$|hono|honest|hour|heir|[aeiou])/i
   UPCASE_A_REQUIRING_PATTERNS = /^(UN$)/
   UPCASE_AN_REQUIRING_PATTERNS = /^$/ #need if we decide to support acronyms like "XL" (extra-large)
