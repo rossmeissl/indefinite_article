@@ -12,6 +12,8 @@ class TestIndefiniteArticle < Test::Unit::TestCase
     hour
     honest
     heir
+    utter
+    urgent
     a e f h i l m n o r s x
   }
 
@@ -27,6 +29,10 @@ class TestIndefiniteArticle < Test::Unit::TestCase
     unicorn
     unilateral
     banana
+    user
+    useful
+    urinologist
+    urea
     b c d g j k p q t u v w y z
   }
 

@@ -16,7 +16,12 @@ Gem::Specification.new do |s|
     'lib/indefinite_article.rb',
     'lib/indefinite_article/version.rb'
   ]
+  s.test_files    = [
+    'test/test_indefinite_article.rb'
+  ]
+
   s.require_paths = ["lib"]
   s.add_dependency 'activesupport'
   s.add_development_dependency 'i18n'
+  s.add_development_dependency 'rake'
 end
