@@ -9,6 +9,7 @@ class TestIndefiniteArticle < Test::Unit::TestCase
     honor
     honorable
     onerous
+    herb
     hour
     honest
     heir
@@ -34,7 +35,11 @@ class TestIndefiniteArticle < Test::Unit::TestCase
     urinologist
     urea
     b c d g j k p q t u v w y z
-  }
+  } + [
+    'UK angler',
+    'UN citizen',
+    'US ambassador'
+  ]
 
   def setup
   end
@@ -58,8 +63,8 @@ class TestIndefiniteArticle < Test::Unit::TestCase
   end
 
   def test_indefinite_article_selection_case_insensitvity
-    assert_equal "a", "bananna".indefinite_article
-    assert_equal "a", "Bananna".indefinite_article
+    assert_equal "a", "banana".indefinite_article
+    assert_equal "a", "Banana".indefinite_article
     assert_equal "an", "apple".indefinite_article
     assert_equal "an", "Apple".indefinite_article
   end
