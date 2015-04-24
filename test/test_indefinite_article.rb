@@ -15,6 +15,7 @@ class TestIndefiniteArticle < Test::Unit::TestCase
     utter
     urgent
     a e f h i l m n o r s x
+    8 11
   }
 
   A_WORDS = %w{
@@ -34,6 +35,7 @@ class TestIndefiniteArticle < Test::Unit::TestCase
     urinologist
     urea
     b c d g j k p q t u v w y z
+    1 2 3 4 5 6 7 9 10 12 13 14 15 16 17 18 19 20
   }
 
   def setup
