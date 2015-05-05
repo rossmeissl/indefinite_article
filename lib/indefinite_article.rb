@@ -15,7 +15,7 @@ module IndefiniteArticle
       'an'
     else
       'a'
-    end
+    end unless first_word.nil?
   end
 
   def with_indefinite_article(upcase = false)

@@ -83,4 +83,8 @@ class TestIndefiniteArticle < Test::Unit::TestCase
   def test_indefinite_article_prefix
     assert_equal 'a banana', 'banana'.with_indefinite_article
   end
+
+  def test_empty_string
+    assert_equal '', ''.indefinitize
+  end
 end
