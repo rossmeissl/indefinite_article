@@ -22,6 +22,10 @@ class TestIndefiniteArticle < Minitest::Test
     ukulele
     UN
     uk
+    oaxaca
+    oaxacan
+    oaxacania
+    oaxacanthaxia
     one
     once
     onetime
