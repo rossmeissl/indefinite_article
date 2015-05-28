@@ -1,6 +1,6 @@
 require File.expand_path('../helper', __FILE__)
 
-class TestIndefiniteArticle < Test::Unit::TestCase
+class TestIndefiniteArticle < Minitest::Test
   AN_WORDS = %w{
     apple
     unilluminated
