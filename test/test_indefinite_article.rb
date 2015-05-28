@@ -33,6 +33,7 @@ class TestIndefiniteArticle < Minitest::Test
     ouija
     european
     ewe
+    ubiquitous
     unicorn
     unilateral
     banana
