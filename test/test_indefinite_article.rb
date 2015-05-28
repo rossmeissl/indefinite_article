@@ -25,6 +25,7 @@ class TestIndefiniteArticle < Minitest::Test
     one
     once
     onetime
+    ouija
     european
     ewe
     unicorn
