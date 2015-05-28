@@ -42,7 +42,6 @@ class TestIndefiniteArticle < Minitest::Test
     ewe
     ubiquity
     uboat
-    ubity
     unicorn
     unilateral
     banana
