@@ -26,6 +26,7 @@ class TestIndefiniteArticle < Minitest::Test
     oaxacan
     oaxacania
     oaxacanthaxia
+    ufo
     one
     onearmed
     once
