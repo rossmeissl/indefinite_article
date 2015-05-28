@@ -4,6 +4,8 @@ class TestIndefiniteArticle < Minitest::Test
   AN_WORDS = %w{
     apple
     unassailable
+    ubuntu
+    ubersexual
     ungrammatical
     unanswered
     unilluminated
@@ -39,6 +41,8 @@ class TestIndefiniteArticle < Minitest::Test
     european
     ewe
     ubiquity
+    uboat
+    ubity
     unicorn
     unilateral
     banana
