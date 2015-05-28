@@ -3,6 +3,9 @@ require File.expand_path('../helper', __FILE__)
 class TestIndefiniteArticle < Minitest::Test
   AN_WORDS = %w{
     apple
+    unassailable
+    ungrammatical
+    unanswered
     unilluminated
     unintentional
     unlikely
@@ -27,6 +30,7 @@ class TestIndefiniteArticle < Minitest::Test
     oaxacania
     oaxacanthaxia
     ufo
+    unanimous
     one
     onearmed
     once
@@ -34,7 +38,7 @@ class TestIndefiniteArticle < Minitest::Test
     ouija
     european
     ewe
-    ubiquitous
+    ubiquity
     unicorn
     unilateral
     banana
