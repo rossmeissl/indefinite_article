@@ -27,6 +27,7 @@ class TestIndefiniteArticle < Minitest::Test
     oaxacania
     oaxacanthaxia
     one
+    onearmed
     once
     onetime
     ouija
