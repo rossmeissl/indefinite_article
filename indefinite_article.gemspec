@@ -5,6 +5,7 @@ require "indefinite_article/version"
 Gem::Specification.new do |s|
   s.name        = "indefinite_article"
   s.version     = IndefiniteArticle::VERSION
+  s.licenses    = ['MIT']
   s.authors     = ["Andrew Rossmeissl", 'Shane Brinkman-Davis']
   s.email       = ["andy@rossmeissl.net"]
   s.homepage    = "http://github.com/rossmeissl/indefinite_article"
