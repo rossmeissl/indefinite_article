@@ -28,9 +28,6 @@ class TestIndefiniteArticle < Minitest::Test
     UN
     uk
     oaxaca
-    oaxacan
-    oaxacania
-    oaxacanthaxia
     ufo
     unanimous
     one
