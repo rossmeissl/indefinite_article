@@ -17,6 +17,7 @@ class TestIndefiniteArticle < Minitest::Test
     hour
     honest
     heir
+    NDA
     utter
     urgent
     a e f h i l m n o r s x
