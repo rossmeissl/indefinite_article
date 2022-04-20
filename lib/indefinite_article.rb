@@ -5,8 +5,8 @@ module IndefiniteArticle
 
   A_REQUIRING_PATTERNS = /^(([bcdgjkpqtuvwyz]|onc?e|onearmed|onetime|ouija)$|e[uw]|uk|ubi|ubo|oaxaca|ufo|ur[aeiou]|use|ut([^t])|unani|uni(l[^l]|[a-ko-z]))/i
   AN_REQUIRING_PATTERNS = /^([aefhilmnorsx]$|hono|honest|hour|heir|[aeiou]|8|11)/i
-  UPCASE_A_REQUIRING_PATTERNS = /^(UN$)/
-  UPCASE_AN_REQUIRING_PATTERNS = /^(NDA)$/ #need if we decide to support acronyms like "XL" (extra-large)
+  UPCASE_A_REQUIRING_PATTERNS = /^([BCDGJKPQTUVWYZ][A-Z]*$|FEMA|LASER|NAFTA|NATO|SCUBA|SWAT)/
+  UPCASE_AN_REQUIRING_PATTERNS = /^([AEFHILMNORSX][A-Z]*)$/
 
   def indefinite_article
     first_word = to_s.split(/[- ]/).first
